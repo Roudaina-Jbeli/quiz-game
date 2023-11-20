@@ -1,11 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Quiz</title>   <!-- Set the title of the webpage -->
+    <link rel="stylesheet" href="style.css">  <!-- Link to an external stylesheet (style.css) for styling -->
 </head>
 <body>
-    
+     <!-- Main content of the webpage starts here -->
+      <!-- Heading for the quiz -->
+     <h1>Start your Quiz</h1>
+    <div id="question-text"></div> <!-- Display the question text -->
+    <form id="answer-form"></form>  <!-- Form to input answers -->
+    <button id="next-button">Next</button> <!-- Button to move to the next question -->
+    <div id="result"></div> <!-- Display the result of the quiz -->
+    <button id="play-again">Play Again</button>    <!-- Button to play the quiz again -->
+    <audio id="clapSound" src="./Audience Clapping - Sound Effect.mp3"></audio>
+    <audio id="ohNoSound" src="./OH NO! sound effect for vlog - No Copyright.mp3"></audio>
+ <!-- Audio elements for applause and "oh no" sounds -->
+    <script src="main.js"></script>   <!-- Link to the main JavaScript file (main.js) -->
 </body>
 </html>
