@@ -1,24 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Quiz</title>   <!-- Set the title of the webpage -->
-    <link rel="stylesheet" href="style.css">  <!-- Link to an external stylesheet (style.css) for styling -->
+    <!-- Give the page a title -->
+    <title>My Quiz</title>
+    <!-- Link to the style sheet for making things look good -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <!-- Main content of the webpage starts here -->
-      <!-- Heading for the quiz -->
-     <h1>Start your Quiz</h1>
-    <div id="question-text"></div> <!-- Display the question text -->
-    <form id="answer-form"></form>  <!-- Form to input answers -->
-    <button id="next-button">Next</button> <!-- Button to move to the next question -->
-    <div id="result"></div> <!-- Display the result of the quiz -->
-    <button id="play-again">Play Again</button>    <!-- Button to play the quiz again -->
-    <audio id="clapSound" src="./Audience Clapping - Sound Effect.mp3"></audio>
-    <audio id="ohNoSound" src="./OH NO! sound effect for vlog - No Copyright.mp3"></audio>
- <!-- Audio elements for applause and "oh no" sounds -->
-    <script src="main.js"></script>   <!-- Link to the main JavaScript file (main.js) -->
+    <!-- Area for players to enter their names -->
+    <div id="player-inputs">
+        <h2 for="player-one">Player One:</h2>
+        <!-- Input field for Player One -->
+        <input type="text" id="player-one" required>
+        <br>
+        <h2 for="player-two">Player Two:</h2>
+        <!-- Input field for Player Two -->
+        <input type="text" id="player-two" required>
+        <br>
+        <!-- Button to kick off the quiz -->
+        <button id="start-button">Start Quiz</button>
+    </div>
+
+    <!-- Main quiz content section, initially hidden -->
+    <div id="quiz-container" style="display:none;">
+        <h1>Start your Quiz</h1>
+        <!-- Container for displaying quiz questions -->
+        <div id="question-text"></div>
+        <!-- Form for answering questions -->
+        <form id="answer-form"></form>
+        <!-- Timer bar for the quiz -->
+        <div id="timer-container">
+            <div id="timer-bar"></div>
+        </div>
+        <!-- Display area for quiz results -->
+        <div id="result"></div>
+        <!-- Button to play the quiz again -->
+        <button id="play-again">Play Again</button>
+        <!-- Sound effects for applause and "oh no" moments -->
+        <audio id="clapSound" src="./Audience Clapping - Sound Effect.mp3"></audio>
+        <audio id="ohNoSound" src="./OH NO! sound effect for vlog - No Copyright.mp3"></audio>
+        <!-- Display areas for Player One and Player Two scores -->
+        <div id="player-one-score"></div>
+        <div id="player-two-score"></div>
+    </div>
+
+    <!-- Modal for showing the winner -->
+    <div id="winner-modal" class="modal">
+        <div class="modal-content">
+            <!-- Button to close the modal -->
+            <span class="close">&times;</span>
+            <!-- Winner's image and name -->
+            <img id="winner-image" src="./winner.png" alt="Winner Image">
+            <h2 id="winner-name"></h2>
+            <!-- Button for Player Two to take revenge -->
+            <button class="start-button" id="play-again-revenge">Player 2 Take Revenge</button>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="main.js"></script>
 </body>
 </html>
+
